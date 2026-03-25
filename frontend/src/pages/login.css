@@ -10,20 +10,18 @@
   overflow: hidden;
 }
 
-/* Left Side - Pure Blur Area with Gradient Edge */
+/* Left Side */
 .login-form-container {
   flex: 1;
   display: flex;
   flex-direction: column;
   padding: 40px 10%;
   
-  /* --- THE BLUR EFFECT --- */
   background: rgba(255, 255, 255, 0.3); 
   backdrop-filter: blur(25px); 
   -webkit-backdrop-filter: blur(25px); 
   
-  /* --- THE GRADIENT EDGE FIX --- */
-  /* This keeps the left side solid and fades the blur out on the right */
+ 
   -webkit-mask-image: linear-gradient(to right, black 80%, transparent 100%);
   mask-image: linear-gradient(to right, black 80%, transparent 100%);
   
@@ -125,7 +123,7 @@
   font-weight: 700;
 }
 
-/* Keeps the right side clear for the image students */
+
 .visual-overlay {
   display: none; 
 }
