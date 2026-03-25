@@ -2,8 +2,6 @@ const express = require("express");
 const router = express.Router();
 const authMiddleware = require("../middleware/authMiddleware");
 const User = require("../models/User");
-
-// In-memory chat store for MVP (replace with DB later)
 let chats = [];
 
 // Start a chat / session request
