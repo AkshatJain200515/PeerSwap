@@ -1,0 +1,108 @@
+/* Re-using the core layout from login.css to ensure the background is there */
+.login-page {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-image: url('../assets/home.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Tag specific styling for the register page */
+.tag-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.reg-tag-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.reg-tag {
+  background: rgba(15, 23, 42, 0.05); /* Very light dark tint */
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #1e293b;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.reg-tag:hover {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+/* Keep your existing selected states, they provide great contrast! */
+.selected-strong {
+  background: #22c55e !important; /* Brighter green */
+  color: white !important;
+  border-color: #16a34a !important;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+.selected-weak {
+  background: #ef4444 !important; /* Brighter red */
+  color: white !important;
+  border-color: #dc2626 !important;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+.register-header {
+  display: flex;
+  align-items: center;
+  gap: 450px; /* This creates a nice gap between the back button and the logo */
+  margin-bottom: 40px;
+  justify-content: flex-start; /* This forces everything to the left */
+}
+/* Custom Scrollbar for the glass panel since registration is longer */
+.login-form-container::-webkit-scrollbar {
+  width: 5px;
+}
+.login-form-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Enhanced Input Fields for Glass UI */
+.input-group input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  
+  /* Semi-transparent dark tint instead of pure white */
+  background: rgba(255, 255, 255, 0.5); 
+  
+  /* Stronger border to define the shape */
+  border: 1px solid rgba(15, 23, 42, 0.1); 
+  
+  font-size: 16px;
+  color: #0f172a;
+  transition: all 0.3s ease;
+  
+  /* Subtle inner shadow to give it a "pressed" look into the glass */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* The "Focus" state is the most important for visibility */
+.input-group input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.9); /* Gets solid when typing */
+  border-color: #3b82f6; /* Blue border to highlight active field */
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1); /* Soft blue outer glow */
+  transform: translateY(-1px);
+}
+
+/* Make placeholders slightly darker so they are readable */
+.input-group input::placeholder {
+  color: #64748b;
+  opacity: 0.8;
+}

@@ -1,0 +1,121 @@
+.learn-more-page {
+  min-height: 100vh;
+  background-image: url('../assets/home.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.overlay {
+  min-height: 100vh;
+  background: rgba(15, 23, 42, 0.4); /* Darker overlay to make text pop */
+  backdrop-filter: blur(8px);
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.content-container {
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+}
+
+.learn-header h1 {
+  font-size: 52px;
+  color: white;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 15px;
+}
+
+.tagline {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 60px;
+}
+
+.back-home {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 100px;
+  cursor: pointer;
+  margin-bottom: 40px;
+  transition: 0.3s;
+}
+
+.back-home:hover { background: white; color: #0f172a; }
+
+/* The Grid and Cards */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.glass-info-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 40px 30px;
+  border-radius: 24px;
+  color: white;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.glass-info-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #3b82f6;
+}
+
+.icon-circle {
+  font-size: 40px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.glass-info-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.glass-info-card p {
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Call to Action */
+.cta-section h2 {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.cta-btn {
+  padding: 18px 40px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #2563eb;
+  transform: scale(1.05);
+}
+
+/* Mobile Friendly */
+@media (max-width: 768px) {
+  .learn-header h1 { font-size: 36px; }
+  .features-grid { grid-template-columns: 1fr; }
+}

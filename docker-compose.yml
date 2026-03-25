@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  # Service 1: Node.js Backend
+  backend:
+    build: ./backend
+    container_name: peerswap-backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./backend/.env
+    # Logic: Run 'npm run seed' (node seeder.js) then 'npm start'
+    command: sh -c "npm run seed && npm start"
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+
+  # Service 2: Vite Frontend
+  frontend:
+    build: ./frontend
+    container_name: peerswap-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules

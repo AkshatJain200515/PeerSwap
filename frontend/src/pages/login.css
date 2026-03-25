@@ -1,0 +1,145 @@
+/* login.css */
+.login-page {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-image: url('../assets/home.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Left Side - Pure Blur Area with Gradient Edge */
+.login-form-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 10%;
+  
+  /* --- THE BLUR EFFECT --- */
+  background: rgba(255, 255, 255, 0.3); 
+  backdrop-filter: blur(25px); 
+  -webkit-backdrop-filter: blur(25px); 
+  
+  /* --- THE GRADIENT EDGE FIX --- */
+  /* This keeps the left side solid and fades the blur out on the right */
+  -webkit-mask-image: linear-gradient(to right, black 80%, transparent 100%);
+  mask-image: linear-gradient(to right, black 80%, transparent 100%);
+  
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 2;
+}
+
+.login-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.back-link, .link-btn {
+  background: none;
+  border: none;
+  color: #0f172a; 
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.login-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 22px;
+  color: #0f172a;
+}
+
+.form-content {
+  max-width: 400px;
+  margin: auto auto; 
+  width: 100%;
+}
+
+.form-content h1 {
+  font-size: 38px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  color: #1e293b;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.input-group input::placeholder {
+  color: #64748b;
+}
+
+.login-submit-btn {
+  width: 100%;
+  padding: 16px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+}
+
+.login-submit-btn:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.register-redirect {
+  text-align: center;
+  margin-top: 25px;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* Keeps the right side clear for the image students */
+.visual-overlay {
+  display: none; 
+}
+
+.login-visual {
+  flex: 1.2; 
+  background: transparent; 
+}
+
+@media (max-width: 1024px) {
+  .login-form-container { 
+    padding: 40px; 
+    background: rgba(255, 255, 255, 0.85);
+    -webkit-mask-image: none; /* Remove gradient on mobile for better visibility */
+    mask-image: none;
+  }
+}

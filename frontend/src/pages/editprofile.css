@@ -1,0 +1,70 @@
+.edit-profile-wrapper {
+  min-height: 100vh;
+  background-image: url('../assets/home.jpg'); 
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.edit-container {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.edit-card-glass {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  width: 100%;
+  max-width: 700px;
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.edit-card-glass h2 { font-size: 32px; color: #0f172a; margin-bottom: 5px; }
+.edit-subtitle { color: #1e293b; font-weight: 600; margin-bottom: 30px; }
+
+.edit-input-group { margin-bottom: 25px; }
+.edit-input-group label { display: block; font-weight: 700; font-size: 14px; margin-bottom: 8px; color: #0f172a; }
+.edit-input-group input {
+  width: 100%; padding: 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.7); font-size: 16px; color: #0f172a;
+}
+
+.subject-selection-block { margin-bottom: 30px; }
+.subject-selection-block label { display: block; font-weight: 700; margin-bottom: 12px; color: #0f172a; }
+
+.subject-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.subject-tag {
+  background: rgba(255,255,255,0.5); border: 1px solid rgba(255,255,255,0.4);
+  padding: 8px 16px; border-radius: 100px; font-weight: 600; font-size: 13px;
+  cursor: pointer; transition: 0.2s; color: #475569;
+}
+
+.subject-tag:hover { background: rgba(255,255,255,0.8); transform: translateY(-1px); }
+
+/* Selected States */
+.active-strong { background: #dcfce7 !important; color: #166534 !important; border-color: #86efac !important; }
+.active-weak { background: #fee2e2 !important; color: #991b1b !important; border-color: #fca5a5 !important; }
+
+.edit-form-actions { display: flex; gap: 15px; margin-top: 40px; }
+
+.save-btn {
+  flex: 2; padding: 14px; background: #3b82f6; color: white; border: none;
+  border-radius: 12px; font-weight: 700; cursor: pointer; transition: 0.2s;
+}
+.save-btn:hover { background: #2563eb; box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3); }
+
+.cancel-btn {
+  flex: 1; padding: 14px; background: rgba(0,0,0,0.05); color: #475569; border: none;
+  border-radius: 12px; font-weight: 700; cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .edit-card-glass { padding: 25px; }
+  .edit-form-actions { flex-direction: column; }
+}
