@@ -3,9 +3,7 @@ const router = express.Router();
 const User = require("../models/User");
 const authMiddleware = require("../middleware/authMiddleware");
 
-// @route   GET /api/users/match
-// @desc    Find matching peers
-// @access  Private
+//Match
 router.get("/match", authMiddleware, async (req, res) => {
   try {
     const currentUser = await User.findById(req.user.id); // full user object
