@@ -41,16 +41,16 @@ const seedUsers = async () => {
         const hashedPassword = await bcrypt.hash("password123", 10);
         let users = [];
 
-        for (let i = 0; i < 1000; i++) { // Increased to 120 for even more variety
+        for (let i = 0; i < 1000; i++) {
             const fName = firstNames[Math.floor(Math.random() * firstNames.length)];
             const lName = lastNames[Math.floor(Math.random() * lastNames.length)];
             
-            // Randomly decide if this user is a "Specialist" (1 subject) or "Generalist" (2-3 subjects)
+            // Randomly decides subjects for Users
             const strongCount = Math.random() > 0.8 ? 2 : 1;
             const weakCount = Math.random() > 0.8 ? 2 : 1;
 
             const myStrong = getRandomSubjects(strongCount);
-            const myWeak = getRandomSubjects(weakCount, myStrong); // Ensure they don't want help in what they are good at!
+            const myWeak = getRandomSubjects(weakCount, myStrong);
 
             users.push({
                 name: `${fName} ${lName}`,
