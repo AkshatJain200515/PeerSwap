@@ -1,7 +1,6 @@
 import { useState } from "react";
 import api from "../api"; 
 import { useNavigate } from "react-router-dom";
-// IMPORT the subjects from your constants to ensure the names match exactly
 import { SUBJECTS } from "../constants/subjects"; 
 import "./register.css";
 import Validateemail from "../Utils/validate";
@@ -26,7 +25,7 @@ export default function Register() {
         return alert("Validation Error: Please enter a valid email. ");
     }
 
-  // 2. Email Validation (Must have something before and after @ and a dot)
+ 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     return alert("Invalid Email: Please enter a real email address (e.g., name@school.edu).");
@@ -38,13 +37,13 @@ export default function Register() {
   if (strongSubjects.length === 0 || weakSubjects.length === 0) {
     return alert("Please select at least one strength and one weakness to allow for matching.");
   }
-    // 1. Ensure we are sending clean arrays (removing any potential proxy objects)
+   
     const payload = { 
       name: name.trim(), 
       email: email.trim().toLowerCase(), 
       password: password, 
-      strongSubjects: [...strongSubjects], // Explicitly spread into a new array
-      weakSubjects: [...weakSubjects]    // Explicitly spread into a new array
+      strongSubjects: [...strongSubjects],
+      weakSubjects: [...weakSubjects]   
     };
 
     console.log("PAYLOAD BEING SENT:", payload);
@@ -61,11 +60,11 @@ export default function Register() {
         navigate("/dashboard");
       }
     } catch (error) {
-      // 2. This is the magic part: it will show exactly what the backend error is
+      
       const errorDetail = error.response?.data;
       console.error("FULL ERROR OBJECT:", errorDetail);
 
-      // If your backend sends validation errors (e.g., "Password too short")
+      
       if (errorDetail?.errors) {
         const firstError = Object.values(errorDetail.errors)[0];
         alert(`Validation Error: ${firstError.message || firstError}`);
@@ -127,7 +126,7 @@ export default function Register() {
             <div className="tag-section">
               <label className="tag-label">I'm strong in:</label>
               <div className="reg-tag-grid">
-                {/* Use the imported SUBJECTS here */}
+                {/*  */}
                 {SUBJECTS.map(subj => (
                   <button key={subj} type="button" 
                     className={`reg-tag ${strongSubjects.includes(subj) ? 'selected-strong' : ''}`}
@@ -139,7 +138,7 @@ export default function Register() {
             <div className="tag-section" style={{ marginTop: '20px' }}>
               <label className="tag-label">I need help with:</label>
               <div className="reg-tag-grid">
-                {/* Use the imported SUBJECTS here */}
+                {/* */}
                 {SUBJECTS.map(subj => (
                   <button key={subj} type="button" 
                     className={`reg-tag ${weakSubjects.includes(subj) ? 'selected-weak' : ''}`}
