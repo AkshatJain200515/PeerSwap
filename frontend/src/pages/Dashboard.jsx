@@ -8,7 +8,7 @@ export default function Dashboard() {
   const [user, setUser] = useState(null);
   const [matches, setMatches] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState(""); // New state for search
+  const [searchQuery, setSearchQuery] = useState(""); 
   const navigate = useNavigate();
 
   const startChat = async (otherUserId) => {
@@ -56,7 +56,7 @@ export default function Dashboard() {
     fetchDashboardData();
   }, [navigate]);
 
-  // Professor's Request: Implementation of search/filtering
+
   const filteredMatches = matches.filter((match) => {
     const query = searchQuery.toLowerCase();
     const nameMatch = match.name?.toLowerCase().includes(query) || 
@@ -116,7 +116,7 @@ export default function Dashboard() {
               <p>Found {filteredMatches.length} matches for you</p>
             </div>
             
-            {/* Professor's Request: Search Bar Component */}
+            {/* Search Bar Component */}
             <div className="search-box">
               <input 
                 type="text" 
