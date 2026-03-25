@@ -1,6 +1,4 @@
-/* src/styles.css */
 
-/* General body */
 body {
   font-family: 'Inter', Arial, sans-serif;
   background:#f5f7fb;
@@ -9,7 +7,7 @@ body {
   color: #1f2937;
 }
 
-/* Centered card for forms and dashboard */
+
 .card {
   max-width: 500px;
   margin: 50px auto;
@@ -91,7 +89,7 @@ button.link:hover {
   margin: 20px auto;
   padding: 15px;
   border-radius: 10px;
-  background-color: #f3f4f6; /* light gray background */
+  background-color: #f3f4f6; 
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -100,7 +98,7 @@ button.link:hover {
 .chat-container h2 {
   text-align: center;
   margin-bottom: 15px;
-  color: #1f2937; /* dark gray */
+  color: #1f2937;
 }
 
 /* Messages area */
@@ -109,7 +107,7 @@ button.link:hover {
   overflow-y: auto;
   padding: 10px;
   border-radius: 8px;
-  background-color: #ffffff; /* white background for messages */
+  background-color: #ffffff; 
   border: 1px solid #e5e7eb;
   margin-bottom: 15px;
   display: flex;
@@ -127,13 +125,13 @@ button.link:hover {
 
 /* Message from self */
 .chat-message.self {
-  background-color: #d1fae5; /* light green */
+  background-color: #d1fae5; 
   align-self: flex-end;
 }
 
 /* Message from peer */
 .chat-message.peer {
-  background-color: #e5e7eb; /* light gray */
+  background-color: #e5e7eb; ]
   align-self: flex-start;
 }
 
@@ -153,7 +151,7 @@ button.link:hover {
 }
 
 .chat-input-container input:focus {
-  border-color: #4f46e5; /* focus color */
+  border-color: #4f46e5; 
   box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
 }
 
@@ -162,7 +160,7 @@ button.link:hover {
   padding: 10px 16px;
   border-radius: 8px;
   border: none;
-  background-color: #4f46e5; /* indigo */
+  background-color: #4f46e5; 
   color: #ffffff;
   font-weight: bold;
   cursor: pointer;
