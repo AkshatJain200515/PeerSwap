@@ -5,9 +5,7 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 const authMiddleware = require("../middleware/authMiddleware");
 
-
-// @route   POST /api/auth/register
-// @desc    Register a new user
+//register
 router.post("/register", async (req, res) => {
   const { name, email, password, strongSubjects, weakSubjects } = req.body;
   console.log("Incoming registration :", { name, email, strongSubjects, weakSubjects });
@@ -26,7 +24,7 @@ router.post("/register", async (req, res) => {
     const newUser = await User.create({
       name,
       email,
-      password, // ❗ DO NOT hash here
+      password,
       strongSubjects,
       weakSubjects
     });
@@ -44,7 +42,7 @@ router.post("/register", async (req, res) => {
   }
 });
 
-// Optional: Login route (you can add later)
+
 router.post("/login", async (req, res, next) => {
   try {
     const { email, password } = req.body;
