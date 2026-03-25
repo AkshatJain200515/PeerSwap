@@ -1,4 +1,4 @@
-/* Reset default browser spacing */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,26 +10,26 @@ body, html {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Update this entire section in your home.css */
+
 
 .peerswap-container {
   height: 100vh;
   width: 100%;
   
-  /* Replace 'background.jpg' with your new high-res image filename */
+  
   background-image: url('../assets/home.jpg');
   
-  /* --- These three lines are the magic combo: --- */
-  background-size: cover;       /* Fills the whole page */
-  background-position: 85% center; /* Pushes the *magnified* people off to the side, leaving them at natural scale */
+ 
+  background-size: cover;       
+  background-position: 85% center;
   background-repeat: no-repeat;
   
   display: flex;
   flex-direction: column;
-  background-color: #f0f4f8; /* Optional: matches the sky color so there are never white gaps */
+  background-color: #f0f4f8; 
 }
 
-/* Navbar Styling */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -62,7 +62,7 @@ body, html {
   gap: 20px;
 }
 
-/* Modern Login Link (Styled as text-btn) */
+
 .nav-btn-login {
   text-decoration: none;
   color: #475569;
@@ -75,7 +75,6 @@ body, html {
   color: #1e293b;
 }
 
-/* Modern Register Button (Top Right) */
 .nav-btn-register {
   text-decoration: none;
   background-color: #3b82f6;
@@ -94,7 +93,7 @@ body, html {
   box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
 }
 
-/* Hero Section Styling */
+
 .hero-content {
   flex: 1;
   display: flex;
@@ -142,7 +141,6 @@ body, html {
   transform: translateY(-2px);
 }
 
-/* "Learn More" Outline Button */
 .btn-learn-more {
   text-decoration: none;
   background-color: white;
@@ -159,7 +157,7 @@ body, html {
   background-color: #f8fafc;
   border-color: #cbd5e1;
 }
-/* Responsive adjustments for smaller screens */
+
 @media (max-width: 768px) {
   .navbar { padding: 20px 30px; }
   .hero-content { padding-left: 30px; }
