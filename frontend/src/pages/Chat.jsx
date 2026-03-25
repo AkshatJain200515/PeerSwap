@@ -30,7 +30,7 @@ export default function Chat() {
 
   useEffect(() => {
     fetchChat();
-    const interval = setInterval(fetchChat, 2500); // Polling
+    const interval = setInterval(fetchChat, 2500); 
     return () => clearInterval(interval);
   }, [chatId]);
 
