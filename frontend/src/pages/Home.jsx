@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "./home.css";
-import heroImageSource from "../assets/home.jpg"; // put your image in src/assets
+import heroImageSource from "../assets/home.jpg"; 
 
 export default function Home() {
   const navigate = useNavigate();
@@ -33,7 +33,7 @@ export default function Home() {
             Find study partners to boost your learning.
           </p>
           <div className="cta-buttons">
-            {/* Points to /register as requested */}
+            {/* Register */}
             <a href="/register" className="btn-get-started">Get Started</a>
             <a href="/about" className="btn-learn-more">Learn More</a>
           </div>
