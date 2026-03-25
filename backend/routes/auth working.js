@@ -4,8 +4,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 
-// @route   POST /api/auth/register
-// @desc    Register a new user
+//Register Route
 router.post("/register", async (req, res) => {
   try {
     const { name, email, password, strongSubjects, weakSubjects } = req.body;
@@ -18,7 +17,7 @@ router.post("/register", async (req, res) => {
     const newUser = await User.create({
       name,
       email,
-      password, // ❗ DO NOT hash here
+      password,
       strongSubjects,
       weakSubjects
     });
@@ -40,7 +39,7 @@ router.post("/register", async (req, res) => {
   }
 });
 
-// Optional: Login route (you can add later)
+//Login Route
 router.post("/login", async (req, res, next) => {
   try {
     const { email, password } = req.body;
