@@ -18,14 +18,13 @@ export default function Login() {
   password: password 
 });
       
-      // 1. Log the response to see what your backend actually sends
+      
       console.log("LOGIN RESPONSE:", response.data);
 
-      // 2. Save the Token
+      
       localStorage.setItem("token", response.data.token);
 
-      // 3. SAVE THE USER ID (This is what fixes the Chat Name bug)
-      // We check multiple places where the ID might be hiding in your response
+    
       const idToSave = response.data.user?._id || response.data.userId || response.data._id;
       if (idToSave) {
         localStorage.setItem("userId", idToSave);
@@ -36,7 +35,7 @@ export default function Login() {
 
       navigate("/dashboard");
     } catch (error) {
-      // 4. Enhanced error logging
+      
       console.error("LOGIN FAILED ERROR:", error.response?.data || error);
       
       const errorMessage = error.response?.data?.message || "Login failed. Please check your credentials.";
